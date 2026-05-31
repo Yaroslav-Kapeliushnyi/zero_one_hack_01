@@ -1,0 +1,29 @@
+[workspace]
+name = "hackathon-industrial"
+version = "0.1.0"
+description = "Zero One Hack 2026 — Industrial AI Track: Process Sequence Modeling"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tasks]
+train = "python src/train.py"
+baseline = "python src/baseline.py"
+eval = "python src/eval/run_eval.py"
+demo = "python src/demo/demo.py"
+
+[dependencies]
+python = "3.11.*"
+numpy = ">=1.26"
+pandas = ">=2.0"
+scikit-learn = ">=1.4"
+tqdm = ">=4.66"
+matplotlib = ">=3.8"
+pip = "*"
+
+[pypi-dependencies]
+torch = {version = ">=2.2.0", index = "https://download.pytorch.org/whl/cu121"}
+torchvision = {version = ">=0.17.0", index = "https://download.pytorch.org/whl/cu121"}
+transformers = ">=4.40"
+datasets = ">=2.18"
+tokenizers = ">=0.19"
+accelerate = ">=0.29"

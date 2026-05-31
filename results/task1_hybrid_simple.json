@@ -1,0 +1,25 @@
+{
+  "overall": {
+    "dual_ensemble": {
+      "Top1": 0.7,
+      "Top3": 0.9983333333333333,
+      "Top5": 1.0,
+      "MRR": 0.8470833333333332
+    },
+    "HYBRID (dual tail, +orig LSTM)": {
+      "Top1": 0.7183333333333334,
+      "Top3": 0.9983333333333333,
+      "Top5": 1.0,
+      "MRR": 0.8568055555555554
+    },
+    "HYBRID_SIMPLE (enum tail, no orig LSTM)": {
+      "Top1": 0.7183333333333334,
+      "Top3": 0.9983333333333333,
+      "Top5": 1.0,
+      "MRR": 0.8565277777777776
+    }
+  },
+  "hybrid_dual_vs_simple_RANK1_differ": 0,
+  "hybrid_dual_vs_simple_full_differ": 562,
+  "simple_top5_misses": 0
+}

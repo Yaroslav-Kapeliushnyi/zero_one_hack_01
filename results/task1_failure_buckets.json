@@ -1,0 +1,134 @@
+{
+  "source_csv": "results/shootout_task1.csv",
+  "n_examples": 600,
+  "ensemble_top1_correct": 420,
+  "ensemble_errors": 180,
+  "error_buckets": {
+    "a_synonym_sibling_IRREDUCIBLE": 133,
+    "b_boundary_unseen_mostly_irreducible": 0,
+    "b_split": {
+      "optional_category_truth_or_pred": 0,
+      "non_optional": 0
+    },
+    "c_genuine_ranking_miss_RECOVERABLE": 47
+  },
+  "trigram_beats_ensemble": {
+    "n": 70,
+    "by_family": {
+      "ic": 28,
+      "mosfet": 23,
+      "igbt": 19
+    },
+    "by_cut": {
+      "80": 46,
+      "60": 24
+    },
+    "by_truth_category": {
+      "STRIP": 19,
+      "MEASURE": 15,
+      "PASSIVATION": 10,
+      "OPEN": 7,
+      "DEVELOP": 7,
+      "PAD": 7,
+      "CMP": 3,
+      "HARD": 1,
+      "DENSIFY": 1
+    },
+    "ensemble_err_was_synonym_sibling": 56,
+    "truth_rank_in_ensemble_top5": {
+      "2": 69,
+      "4": 1
+    }
+  },
+  "ensemble_beats_trigram": {
+    "n": 70,
+    "by_family": {
+      "mosfet": 21,
+      "ic": 35,
+      "igbt": 14
+    },
+    "by_cut": {
+      "80": 37,
+      "60": 33
+    },
+    "by_truth_category": {
+      "STRIP": 22,
+      "MEASURE": 11,
+      "OPEN": 9,
+      "DEVELOP": 8,
+      "VIA": 5,
+      "DEPOSIT": 5,
+      "PASSIVATION": 4,
+      "ALIGN": 3,
+      "PAD": 2,
+      "CMP": 1
+    },
+    "ensemble_err_was_synonym_sibling": 70,
+    "truth_rank_in_ensemble_top5": {
+      "1": 70
+    }
+  },
+  "baseline_dist": {
+    "by_family": {
+      "mosfet": 180,
+      "igbt": 218,
+      "ic": 202
+    },
+    "by_cut": {
+      "60": 300,
+      "80": 300
+    }
+  },
+  "router_test": {
+    "trigram_alone": 420,
+    "ensemble_alone": 420,
+    "static_family_cut_router": 429,
+    "oracle_best_of_both": 490,
+    "router_gain_over_best_single": 9,
+    "oracle_gain_over_best_single": 70,
+    "cells": {
+      "ic_cut60": {
+        "n": 101,
+        "trigram": 72,
+        "ensemble": 80,
+        "oracle": 88,
+        "better": "ensemble"
+      },
+      "ic_cut80": {
+        "n": 101,
+        "trigram": 61,
+        "ensemble": 60,
+        "oracle": 80,
+        "better": "trigram"
+      },
+      "igbt_cut60": {
+        "n": 109,
+        "trigram": 74,
+        "ensemble": 74,
+        "oracle": 88,
+        "better": "tie"
+      },
+      "igbt_cut80": {
+        "n": 109,
+        "trigram": 87,
+        "ensemble": 82,
+        "oracle": 87,
+        "better": "trigram"
+      },
+      "mosfet_cut60": {
+        "n": 90,
+        "trigram": 76,
+        "ensemble": 77,
+        "oracle": 79,
+        "better": "ensemble"
+      },
+      "mosfet_cut80": {
+        "n": 90,
+        "trigram": 50,
+        "ensemble": 47,
+        "oracle": 68,
+        "better": "trigram"
+      }
+    }
+  }
+}

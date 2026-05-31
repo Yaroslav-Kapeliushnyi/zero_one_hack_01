@@ -1,0 +1,5 @@
+model,ned,token_accuracy
+Markov order-1,0.975,0.071
+Markov order-2,0.643,0.212
+Markov order-3,0.353,0.285
+LSTM beam-5 (ours),0.220,0.426

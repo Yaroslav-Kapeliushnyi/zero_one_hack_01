@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "description": "Honest baseline sweep — all models on the SAME 600 held-out examples (300 val sequences x {0.6,0.8} cut points), ORIGINAL-name ground truth = official scorer convention.",
+    "generated_by": "src/eval/baseline_sweep.py",
+    "cluster_log": "logs/baseline_sweep_43133066.out",
+    "train_sequences": 2700,
+    "eval_examples": 600,
+    "date": "2026-05-30"
+  },
+  "task1_nextstep": [
+    {"model": "Naive (most-frequent)", "top1": 0.023, "top3": 0.088, "top5": 0.215, "mrr": 0.080},
+    {"model": "Markov order-1",        "top1": 0.563, "top3": 0.950, "top5": 0.968, "mrr": 0.751},
+    {"model": "Markov order-2",        "top1": 0.680, "top3": 0.993, "top5": 1.000, "mrr": 0.836},
+    {"model": "Markov order-3",        "top1": 0.700, "top3": 0.998, "top5": 1.000, "mrr": 0.848},
+    {"model": "Dual ensemble (ours)",  "top1": 0.700, "top3": 0.998, "top5": 1.000, "mrr": 0.847}
+  ],
+  "task2_completion": [
+    {"model": "Markov order-1",      "ned": 0.975, "token_accuracy": 0.071},
+    {"model": "Markov order-2",      "ned": 0.643, "token_accuracy": 0.212},
+    {"model": "Markov order-3",      "ned": 0.353, "token_accuracy": 0.285},
+    {"model": "LSTM beam-5 (ours)",  "ned": 0.220, "token_accuracy": 0.426}
+  ],
+  "task3_anomaly_selftest": {
+    "model": "Rule validator + LSTM NLL",
+    "f1": 1.000, "precision": 1.000, "recall": 1.000, "roc_auc": 1.000,
+    "rule_attribution": 0.873,
+    "caveat": "F1=1.0 measured on self-injected anomalies using the same 10 rules the validator checks (somewhat circular). LSTM NLL is the backstop for novel rule types."
+  },
+  "legacy_note": "An older pre-canonical LSTM+GPT+Markov soft-vote ensemble scored 71.5% Top-1 / 100% Top-5 on a DIFFERENT (pre-canonical) self-eval set — NOT directly comparable to this sweep. Use the 70.0% number from this sweep for apples-to-apples slides."
+}
