@@ -1,0 +1,26 @@
+{
+  "overall": {
+    "naive": {
+      "NED": 0.9769,
+      "TokAcc": 0.031,
+      "BlockAcc": 0.24,
+      "ExactMatch": 0.0,
+      "n": 600
+    },
+    "markov3": {
+      "NED": 0.3525,
+      "TokAcc": 0.285,
+      "BlockAcc": 0.588,
+      "ExactMatch": 0.0,
+      "n": 600
+    },
+    "lstm_beam5": {
+      "NED": 0.2223,
+      "TokAcc": 0.42,
+      "BlockAcc": 0.702,
+      "ExactMatch": 0.007,
+      "n": 600
+    }
+  },
+  "source": "cluster job 43175452, train_val_split seed42 val[:300] x {0.6,0.8}, original-name GT, official eval_metrics functions"
+}
